@@ -1,0 +1,103 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Designer", "Designer\Designer.csproj", "{310C5E40-4D3F-413E-80B9-CE25EA45CD47}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DesignerSetup", "DesignerSetup\DesignerSetup.vdproj", "{AE3657FC-F17B-4178-9737-2E18A90EEB53}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisplayCore", "DisplayCore\DisplayCore.csproj", "{DF08A23C-1DC4-4B0B-BA77-626275191F05}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisplayForExcel2003", "DisplayForExcel2003\DisplayForExcel2003.csproj", "{87630ABA-3DDE-4ED4-809F-F88620F3D312}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DisplayForExcel2003Setup", "DisplayForExcel2003Setup\DisplayForExcel2003Setup.vdproj", "{5666F4F2-F4BB-404A-8478-0CECDC77597B}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetSecurity", "SetSecurity\SetSecurity.csproj", "{56E8E807-0807-45E0-B19A-98912AE47630}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateManifest", "UpdateManifest\UpdateManifest.csproj", "{BAA55318-195A-47BD-9F93-72E7D96C71DC}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisplayForExcel2007", "DisplayForExcel2007\DisplayForExcel2007.csproj", "{4872E85C-3EA7-4C7B-8AA4-EA22294E94E7}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DisplayForExcel2007Setup", "DisplayForExcel2007Setup\DisplayForExcel2007Setup", "{6C6CE2FF-2611-4061-96D5-0CEA12719E2D}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{035D18C8-03D3-45B1-BAB2-3CD05C014702}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		OpenGEMS.snk = OpenGEMS.snk
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{310C5E40-4D3F-413E-80B9-CE25EA45CD47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{310C5E40-4D3F-413E-80B9-CE25EA45CD47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{310C5E40-4D3F-413E-80B9-CE25EA45CD47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{310C5E40-4D3F-413E-80B9-CE25EA45CD47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE3657FC-F17B-4178-9737-2E18A90EEB53}.Debug|Any CPU.ActiveCfg = Debug
+		{AE3657FC-F17B-4178-9737-2E18A90EEB53}.Release|Any CPU.ActiveCfg = Release
+		{DF08A23C-1DC4-4B0B-BA77-626275191F05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF08A23C-1DC4-4B0B-BA77-626275191F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF08A23C-1DC4-4B0B-BA77-626275191F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF08A23C-1DC4-4B0B-BA77-626275191F05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87630ABA-3DDE-4ED4-809F-F88620F3D312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87630ABA-3DDE-4ED4-809F-F88620F3D312}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87630ABA-3DDE-4ED4-809F-F88620F3D312}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87630ABA-3DDE-4ED4-809F-F88620F3D312}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5666F4F2-F4BB-404A-8478-0CECDC77597B}.Debug|Any CPU.ActiveCfg = Debug
+		{5666F4F2-F4BB-404A-8478-0CECDC77597B}.Release|Any CPU.ActiveCfg = Release
+		{56E8E807-0807-45E0-B19A-98912AE47630}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56E8E807-0807-45E0-B19A-98912AE47630}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56E8E807-0807-45E0-B19A-98912AE47630}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAA55318-195A-47BD-9F93-72E7D96C71DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAA55318-195A-47BD-9F93-72E7D96C71DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAA55318-195A-47BD-9F93-72E7D96C71DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4872E85C-3EA7-4C7B-8AA4-EA22294E94E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4872E85C-3EA7-4C7B-8AA4-EA22294E94E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C6CE2FF-2611-4061-96D5-0CEA12719E2D}.Debug|Any CPU.ActiveCfg = Debug
+		{6C6CE2FF-2611-4061-96D5-0CEA12719E2D}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

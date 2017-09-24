@@ -1,0 +1,414 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{310C5E40-4D3F-413E-80B9-CE25EA45CD47}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GEMS.Designer</RootNamespace>
+    <AssemblyName>OpenGEMSDesigner</AssemblyName>
+    <ApplicationIcon>designer.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.DirectX.Direct3DX, Version=1.0.2911.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.0.7.40149, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\D3DEnumeration.cs" />
+    <Compile Include="Controls\D3DSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\D3DUtil.cs" />
+    <Compile Include="Controls\Direct3d.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ExRichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\NumberTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataType\Current.cs" />
+    <Compile Include="DataType\Frequency.cs" />
+    <Compile Include="DataType\Length.cs" />
+    <Compile Include="DataType\Time.cs" />
+    <Compile Include="DataType\Vector3WithUnit.cs" />
+    <Compile Include="DataType\Voltage.cs" />
+    <Compile Include="enums.cs" />
+    <Compile Include="Forms\ComputationalDomainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ComputationalDomainForm.Designer.cs">
+      <DependentUpon>ComputationalDomainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExcitationOutputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExcitationOutputForm.Designer.cs">
+      <DependentUpon>ExcitationOutputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExcitationSourceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExcitationSourceForm.Designer.cs">
+      <DependentUpon>ExcitationSourceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FieldOutputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FieldOutputForm.Designer.cs">
+      <DependentUpon>FieldOutputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GeneralOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GeneralOptionsForm.Designer.cs">
+      <DependentUpon>GeneralOptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HuygenBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HuygenBoxForm.designer.cs">
+      <DependentUpon>HuygenBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MaterialDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MaterialDetailsForm.Designer.cs">
+      <DependentUpon>MaterialDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MaterialListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MaterialListForm.Designer.cs">
+      <DependentUpon>MaterialListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MeshSizeDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MeshSizeDetailsForm.Designer.cs">
+      <DependentUpon>MeshSizeDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MeshSizeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MeshSizeForm.Designer.cs">
+      <DependentUpon>MeshSizeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ParallelInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ParallelInfoForm.Designer.cs">
+      <DependentUpon>ParallelInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PreCalculateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PreCalculateForm.Designer.cs">
+      <DependentUpon>PreCalculateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TransparentSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TransparentSettingForm.Designer.cs">
+      <DependentUpon>TransparentSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GEMSComputationalDomain.cs" />
+    <Compile Include="Models\GEMSEnvironment.cs" />
+    <Compile Include="Models\GEMSExcitationSource.cs" />
+    <Compile Include="Models\GEMSHuygensBox.cs" />
+    <Compile Include="Models\GEMSKeyPoint.cs" />
+    <Compile Include="Models\GEMSMaterial.cs" />
+    <Compile Include="Models\GEMSMesh.cs" />
+    <Compile Include="Models\GEMSParallel.cs" />
+    <Compile Include="Models\GEMSParallelArea.cs" />
+    <Compile Include="Models\GEMSPreCalculateFileTagS.cs" />
+    <Compile Include="Models\GEMSProject.cs" />
+    <Compile Include="Models\GEMSSingle.cs" />
+    <Compile Include="Models\GeometryModels\ConeModel.cs" />
+    <Compile Include="Models\GeometryModels\CuboidModel.cs" />
+    <Compile Include="Models\GeometryModels\CylinderModel.cs" />
+    <Compile Include="Models\GeometryModels\GeometryModel.cs" />
+    <Compile Include="Models\GeometryModels\IEOModel.cs" />
+    <Compile Include="Models\GeometryModels\LineModel.cs" />
+    <Compile Include="Models\GeometryModels\PointModel.cs" />
+    <Compile Include="Models\GeometryModels\RectangleModel.cs" />
+    <Compile Include="Models\GeometryModels\RoundModel.cs" />
+    <Compile Include="Models\GeometryModels\SingleEOSymbolModel.cs" />
+    <Compile Include="Models\GeometryModels\SphereModel.cs" />
+    <Compile Include="Models\GeometryOperations\CreateCone.cs" />
+    <Compile Include="Models\GeometryOperations\CreateCuboid.cs" />
+    <Compile Include="Models\GeometryOperations\CreateCylinder.cs" />
+    <Compile Include="Models\GeometryOperations\CreateLine.cs" />
+    <Compile Include="Models\GeometryOperations\CreatePoint.cs" />
+    <Compile Include="Models\GeometryOperations\CreateRectangle.cs" />
+    <Compile Include="Models\GeometryOperations\CreateRound.cs" />
+    <Compile Include="Models\GeometryOperations\CreateSphere.cs" />
+    <Compile Include="Models\GeometryOperations\GeometryCreateOperation.cs" />
+    <Compile Include="Models\GeometryOperations\GeometryOperation.cs" />
+    <Compile Include="Models\MaterialDistributionPreprocess1DInfo.cs" />
+    <Compile Include="Models\MaterialDistributionPreprocess2DInfo.cs" />
+    <Compile Include="Models\SingleEO\CurrentExcitation.cs" />
+    <Compile Include="Models\SingleEO\CurrentOutput.cs" />
+    <Compile Include="Models\SingleEO\PointOutput.cs" />
+    <Compile Include="Models\SingleEO\SingleEO.cs" />
+    <Compile Include="Models\SingleEO\SingleExcitation.cs" />
+    <Compile Include="Models\SingleEO\SingleOutput.cs" />
+    <Compile Include="Models\SingleEO\VoltageExcitation.cs" />
+    <Compile Include="Models\SingleEO\VoltageOutput.cs" />
+    <Compile Include="Panes\GobalModelPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panes\GobalModelPane.Designer.cs">
+      <DependentUpon>GobalModelPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panes\ModelPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panes\ModelPane.Designer.cs">
+      <DependentUpon>ModelPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panes\ObjectsPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panes\ObjectsPane.Designer.cs">
+      <DependentUpon>ObjectsPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panes\PaneCaption.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panes\PropertiesPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panes\PropertiesPane.Designer.cs">
+      <DependentUpon>PropertiesPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patterns\Command.cs" />
+    <Compile Include="Patterns\Commander.cs" />
+    <Compile Include="Patterns\IObserver.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ComputationalDomainForm.resx">
+      <DependentUpon>ComputationalDomainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExcitationOutputForm.resx">
+      <DependentUpon>ExcitationOutputForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExcitationSourceForm.resx">
+      <DependentUpon>ExcitationSourceForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FieldOutputForm.resx">
+      <DependentUpon>FieldOutputForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GeneralOptionsForm.resx">
+      <DependentUpon>GeneralOptionsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HuygenBoxForm.resx">
+      <DependentUpon>HuygenBoxForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MaterialDetailsForm.resx">
+      <DependentUpon>MaterialDetailsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MaterialListForm.resx">
+      <DependentUpon>MaterialListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MeshSizeDetailsForm.resx">
+      <DependentUpon>MeshSizeDetailsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MeshSizeForm.resx">
+      <DependentUpon>MeshSizeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ParallelInfoForm.resx">
+      <DependentUpon>ParallelInfoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PreCalculateForm.resx">
+      <DependentUpon>PreCalculateForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TransparentSettingForm.resx">
+      <DependentUpon>TransparentSettingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panes\GobalModelPane.resx">
+      <DependentUpon>GobalModelPane.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panes\ModelPane.resx">
+      <DependentUpon>ModelPane.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panes\ObjectsPane.resx">
+      <DependentUpon>ObjectsPane.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panes\PaneCaption.resx">
+      <DependentUpon>PaneCaption.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panes\PropertiesPane.resx">
+      <DependentUpon>PropertiesPane.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Renders\AxisRender.cs" />
+    <Compile Include="Renders\BoundingBoxRender.cs" />
+    <Compile Include="Renders\Camera.cs" />
+    <Compile Include="Renders\ConeRender.cs" />
+    <Compile Include="Renders\CuboidRender.cs" />
+    <Compile Include="Renders\CylinderRender.cs" />
+    <Compile Include="Renders\Direct3dRender.cs" />
+    <Compile Include="Renders\DomainRender.cs" />
+    <Compile Include="Renders\GEMSProjectRender.cs" />
+    <Compile Include="Renders\GEMSSingleRender.cs" />
+    <Compile Include="Renders\GeometryRender.cs" />
+    <Compile Include="Renders\GridRender.cs" />
+    <Compile Include="Renders\LineRender.cs" />
+    <Compile Include="Renders\ParallelRender.cs" />
+    <Compile Include="Renders\PointRender.cs" />
+    <Compile Include="Renders\PointsRender.cs" />
+    <Compile Include="Renders\RectangleRender.cs" />
+    <Compile Include="Renders\RoundRender.cs" />
+    <Compile Include="Renders\SingleEOSymbolRender.cs" />
+    <Compile Include="Renders\SphereRender.cs" />
+    <Compile Include="Tools\ConeTool.cs" />
+    <Compile Include="Tools\CuboidTool.cs" />
+    <Compile Include="Tools\CylinderTool.cs" />
+    <Compile Include="Tools\DefaultTool.cs" />
+    <Compile Include="Tools\LineTool.cs" />
+    <Compile Include="Tools\PointTool.cs" />
+    <Compile Include="Tools\RectangleTool.cs" />
+    <Compile Include="Tools\RoundTool.cs" />
+    <Compile Include="Tools\SelectTool.cs" />
+    <Compile Include="Tools\SphereTool.cs" />
+    <Compile Include="Tools\Tool.cs" />
+    <Compile Include="Utility\MathUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="designer.ico" />
+    <Content Include="Libs\ZedGraph.dll" />
+    <None Include="Resources\OpenGEMS.png" />
+    <None Include="Resources\play.png" />
+    <None Include="Resources\parallel.png" />
+    <None Include="Resources\nonespecial.png" />
+    <None Include="Resources\line.png" />
+    <None Include="Resources\huygensbox.png" />
+    <None Include="Resources\gridv.png" />
+    <None Include="Resources\frequency.png" />
+    <None Include="Resources\fit.png" />
+    <None Include="Resources\filesave.png" />
+    <None Include="Resources\fileopen.png" />
+    <None Include="Resources\filenew.png" />
+    <None Include="Resources\field.png" />
+    <None Include="Resources\editpaste.png" />
+    <None Include="Resources\editcut.png" />
+    <None Include="Resources\editcopy.png" />
+    <None Include="Resources\domaincondition.png" />
+    <None Include="Resources\domain.png" />
+    <None Include="Resources\designer.ico" />
+    <None Include="Resources\cylinder.png" />
+    <None Include="Resources\current-source.png" />
+    <None Include="Resources\current-output.png" />
+    <None Include="Resources\cuboid.png" />
+    <None Include="Resources\cone.png" />
+    <None Include="Resources\box.png" />
+    <None Include="Resources\automesh.png" />
+    <None Include="Resources\voltage_source.png" />
+    <None Include="Resources\voltage_output.png" />
+    <None Include="Resources\voltage.png" />
+    <None Include="Resources\view-zx.png" />
+    <None Include="Resources\view-yz.png" />
+    <None Include="Resources\view-xy.png" />
+    <None Include="Resources\transparent.png" />
+    <None Include="Resources\sphere.png" />
+    <None Include="Resources\select.png" />
+    <None Include="Resources\round.png" />
+    <None Include="Resources\reset.png" />
+    <None Include="Resources\rectangle.png" />
+    <None Include="Resources\point.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

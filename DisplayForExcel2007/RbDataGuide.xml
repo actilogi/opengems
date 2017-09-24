@@ -1,0 +1,14 @@
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="OnLoad">
+  <ribbon>
+    <tabs>
+      <tab id="OpenGEMSAddIns" label="OpenGEMS" >
+        <group id="OpenGEMSDisplay" label="OpenGEMS" visible ="1">
+          <button id="OpenGEMSDisplayButton" label="Diplay Tree" 
+           onAction="DisplayButtonClick" 
+           imageMso="ChartTrendline"/>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>
+
